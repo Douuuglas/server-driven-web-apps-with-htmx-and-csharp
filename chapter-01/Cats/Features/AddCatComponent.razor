@@ -1,0 +1,19 @@
+﻿@using chapter_01.Cats.Models
+
+<tr class="on-hover">
+    <td>@Cat.Name</td>
+    <td>@Cat.Breed</td>
+    <td class="buttons">
+        <button class="show-on-hover"
+                hx-delete="/cats/@Cat.Id"
+                hx-confirm="Are you sure?"
+                hx-target="closest tr"
+                hx-swap="delete">
+        </button>
+    </td>
+</tr>
+
+@code {
+    [Parameter]
+    public required Cat Cat { get; set; }
+}

@@ -1,0 +1,14 @@
+﻿<html>
+<head>
+    <title>Htmx - Minimal Api</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/htmx.org@2.0.0"></script>
+</head>
+<body>
+    <button hx-get="/version" hx-target="#version">Get .NET Version</button>
+    <div id="version"></div>
+
+    <br />
+    <a href="/cats">Go to Cats CRUD</a>
+</body>
+</html>

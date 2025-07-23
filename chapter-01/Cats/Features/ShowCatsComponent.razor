@@ -1,0 +1,11 @@
+﻿@using chapter_01.Cats.Models
+
+@foreach (var cat in Cats)
+{
+    <AddCatComponent Cat="cat" />
+}
+
+@code {
+    [Parameter]
+    public required List<Cat> Cats { get; set; }
+}
