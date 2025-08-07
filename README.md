@@ -49,4 +49,9 @@ Another ✅! Just like item 4, it's super easy to use model/data binding and als
 In .NET apps the best HTML templating tool is know as [Razor](https://learn.microsoft.com/en-us/aspnet/core/mvc/views/razor?view=aspnetcore-9.0). My opinion is that it's pretty good choice as you can see in this project, you can mix C# and HTML pretty easily, mixing the benefits of the C# language with HTML. In this case we are using more specifically the [Razor components](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/?view=aspnetcore-9.0).
 
 #### 7. Your preferred code editor provides syntax highlighting and some level of validation
-All the tools I mentioned are very well supported both on Visual Studio as Visual Studio Code, which gives you interesting options in order to develop your application, either on Windows, Mac or Linux.  
+All the tools I mentioned are very well supported both on Visual Studio as Visual Studio Code, which gives you interesting options in order to develop your application, either on Windows, Mac or Linux. 
+
+# Chapter 03 - Developing endpoints
+The third chapter shows how to implement a CRUD application. In the this part I did a little bit more than the book, I added an in memory database and split all the components on it's on files, found in the "/Dogs/Components" folder.
+
+One thing I didn't like and I think should never be considered an example at all is the way this chapter handles the selected dog, it temporarily saves the state in the server, which can cause conflicts with other requests. I kept that in the example but I suggest it never gets used in a real app.
