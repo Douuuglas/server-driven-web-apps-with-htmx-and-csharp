@@ -1,0 +1,11 @@
+﻿@using chapter_03.Dogs.Models
+
+@foreach (var dog in Dogs)
+{
+    <ShowDogComponent Dog="dog" />
+}
+
+@code {
+    [Parameter]
+    public required List<Dog> Dogs { get; set; }
+}

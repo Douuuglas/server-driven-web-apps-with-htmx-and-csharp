@@ -1,0 +1,38 @@
+﻿@using chapter_03.Dogs.Models
+
+<tr class="on-hover" id="row-@(Dog.Id)" @attributes="_attrs">
+    <td>@Dog.Name</td>
+    <td>@Dog.Breed</td>
+    <td class="buttons">
+        <button class="show-on-hover"
+                hx-confirm="Are you sure?"
+                hx-delete="/dogs/@Dog.Id"
+                hx-target="closest tr"
+                hx-swap="outerHTML">
+            X
+        </button>
+        <button class="show-on-hover"
+                hx-put="/dogs/@Dog.Id/select"
+                hx-swap="none">
+            Edit
+        </button>
+    </td>
+</tr>
+
+@code {
+    private Dictionary<string, object> _attrs = new();
+
+    [Parameter]
+    public required Dog Dog { get; set; }
+
+    [Parameter]
+    public bool Updating { get; set; } = false;
+
+    protected override void OnParametersSet()
+    {
+        if (Updating)
+        {
+            _attrs.Add("hx-swap-oob", "true");
+        }
+    }
+}
