@@ -1,6 +1,6 @@
 ﻿namespace chapter_01.Cats.Features;
 
-public class DeleteCat
+internal sealed class DeleteCat
 {
     public static async Task<IResult> Handle(InMemoryDbContext db, Guid Id)
     {

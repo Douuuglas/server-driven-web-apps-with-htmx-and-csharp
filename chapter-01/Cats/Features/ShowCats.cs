@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace chapter_01.Cats.Features;
 
-public class ShowCats
+internal sealed class ShowCats
 {
     public static async Task<RazorComponentResult<ShowCatsComponent>> Handle(InMemoryDbContext db)
     {

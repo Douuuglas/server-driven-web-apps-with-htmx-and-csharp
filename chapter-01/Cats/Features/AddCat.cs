@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace chapter_01.Cats.Features;
 
-public class AddCat
+internal sealed class AddCat
 {
-    public record Request(string Name, string Breed);
+    public sealed record Request(string Name, string Breed);
 
     // Use [FromForm] to make sure the request works
     public static async Task<RazorComponentResult<ShowCatComponent>> Handle(InMemoryDbContext db, [FromForm] Request request)
