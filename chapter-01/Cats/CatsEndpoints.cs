@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace chapter_01.Cats;
 
-public static partial class InitialEndpoints
+public static partial class CatsEndpoints
 {
     // Grouping the cats functionality and endpoints
     public static void MapCatsEndpoints(this WebApplication app)
